@@ -9,10 +9,10 @@ Console.ReadKey();
 
 var files = Directory.GetFiles(inputDir);
 Console.WriteLine($"Found {files.Length} file(s) !!");
-Console.WriteLine($"Processing...");
 foreach(var file in files)
 {
     var fileName = Path.GetFileName(file);
+    Console.WriteLine($"Processing {fileName}...");
     try
     {
         var output = Path.Combine(outputDir, fileName);
